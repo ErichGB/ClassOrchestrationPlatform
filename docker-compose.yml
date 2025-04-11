@@ -1,0 +1,13 @@
+services:
+  vite: 
+    image: node:22
+    command: sh -c "if [ ! -d node_modules ]; then npm install; fi && npm run dev"
+    volumes: 
+      - ".:/usr/src/app" 
+    working_dir: /usr/src/app 
+    ports: 
+      - "5173:5173"
+      - "4173:4173"
+    environment:
+      - VITE_SUPABASE_URL=https://atwnscchackapwyzbvnh.supabase.co
+      - VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF0d25zY2NoYWNrYXB3eXpidm5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM4NjAyOTIsImV4cCI6MjA1OTQzNjI5Mn0.nMQFRlnrdQ4Ee6TStLlZtoJ3Um8bNU0Yi8Ga6q8x4bI
