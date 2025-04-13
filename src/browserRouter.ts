@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     ]
   },
 ], {
-  basename: process.env.NODE_ENV === 'production' ? "/ClassOrchestrationPlatform/" : '/',
+  basename: import.meta.env.MODE === 'production' ? "/ClassOrchestrationPlatform" : '/',
 });
 
 export default router;
