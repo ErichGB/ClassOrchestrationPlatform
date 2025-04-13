@@ -5,6 +5,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: lazy(() => import("./pages/ProtectedRoute.tsx")),
+    errorElement: lazy(() => import("./pages/ErrorPage.tsx")),
     children: [
       {
         index: true,
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
         Component: lazy(() => import("@/pages/auth/pass/Update.tsx")),
       },
     ]
-  },
+  }
 ], {
   basename: import.meta.env.MODE === 'production' ? "/ClassOrchestrationPlatform" : '/',
 });
