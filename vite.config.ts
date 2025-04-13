@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 /// <reference types="Vite/client" />
 
 import path from "path"
@@ -23,10 +22,5 @@ export default defineConfig({
     watch: {
       usePolling: true
     }
-  },
-  test: {
-    environment: 'jsdom',
-    globals: true,
-    setupFiles: ['src/setupTests.ts'],
   }
 })
